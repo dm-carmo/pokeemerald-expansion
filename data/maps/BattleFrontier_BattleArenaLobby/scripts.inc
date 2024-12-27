@@ -553,9 +553,9 @@ BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
 	.string "effective” and goes down if it was\l"
 	.string "“not very effective.”\p"
 	.string "The Skill rating will not go up for\n"
-	.string "moves such as PROTECT and DETECT.\p"
-	.string "If the opponent used PROTECT or\n"
-	.string "DETECT, and your Pokémon failed to\l"
+	.string "moves such as Protect and Detect.\p"
+	.string "If the opponent used Protect or\n"
+	.string "Detect, and your Pokémon failed to\l"
 	.string "hit with a move, its Skill rating will not\l"
 	.string "go down.$"
 

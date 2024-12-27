@@ -1085,7 +1085,7 @@ MatchCall_PersonalizedText37::
 MatchCall_PersonalizedText38::
 	.string "Oh, it's {STR_VAR_1}, hello.\p"
 	.string "I've been swimming a lot but I still\n"
-	.string "can't seem to reach EVERGRANDE.\p"
+	.string "can't seem to reach Ever Grande.\p"
 	.string "Maybe I'm just going in circles.\p"
 	.string "No, no, that can't be possible.\n"
 	.string "Wahahaha.\l"
@@ -2701,7 +2701,7 @@ MatchCall_Text_Scott6::
 	.string "forward to.\p"
 	.string "When you've won your way through\n"
 	.string "the Pokémon League into the Hall\l"
-	.string "Of Fame!$"
+	.string "of Fame!$"
 
 MatchCall_Text_Scott7::
 	.string "… … … … … …\n"
@@ -2825,7 +2825,7 @@ MatchCall_Text_Steven6::
 
 MatchCall_Text_Steven7::
 	.string "Steven: {PLAYER}{KUN}… Congratulations\n"
-	.string "for entering the Hall Of Fame.\p"
+	.string "for entering the Hall of Fame.\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "I hope we can meet again\n"

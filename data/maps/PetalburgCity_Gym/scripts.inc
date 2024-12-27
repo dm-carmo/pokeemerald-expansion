@@ -1279,7 +1279,7 @@ PetalburgCity_Gym_Text_NormanDefeat:
 	.string "Here, take this.$"
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
-	.string "{PLAYER} received the BALANCE Badge\n"
+	.string "{PLAYER} received the Balance Badge\n"
 	.string "from Dad!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
@@ -1291,7 +1291,7 @@ PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:
 	.string "sure you can use it correctly.$"
 
 PetalburgCity_Gym_Text_ExplainFacade:
-	.string "Dad: TM42 contains FACADE.\p"
+	.string "Dad: TM42 contains Facade.\p"
 	.string "It doubles the power of moves if\n"
 	.string "the Pokémon is poisoned, paralyzed,\l"
 	.string "or burned.\p"

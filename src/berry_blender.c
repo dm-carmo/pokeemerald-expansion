@@ -261,12 +261,12 @@ static const u8 sText_WasMade[] = _(" was made!");
 
 static const u8 *const sBlenderOpponentsNames[] =
 {
-    [BLENDER_MISTER] = COMPOUND_STRING("MISTER"),
-    [BLENDER_LADDIE] = COMPOUND_STRING("LADDIE"),
-    [BLENDER_LASSIE] = COMPOUND_STRING("LASSIE"),
+    [BLENDER_MISTER] = COMPOUND_STRING("Mister"),
+    [BLENDER_LADDIE] = COMPOUND_STRING("Laddie"),
+    [BLENDER_LASSIE] = COMPOUND_STRING("Lassie"),
     [BLENDER_MASTER] = COMPOUND_STRING("Master"),
     [BLENDER_DUDE]   = COMPOUND_STRING("Dude"),
-    [BLENDER_MISS]   = COMPOUND_STRING("MISS"),
+    [BLENDER_MISS]   = COMPOUND_STRING("Miss"),
 };
 
 static const u8 sText_CommunicationStandby[] = _("Communication standby…");
@@ -275,7 +275,7 @@ static const u8 sText_RunOutOfBerriesForBlending[] = _("You've run out of Berrie
 static const u8 sText_YourPokeblockCaseIsFull[] = _("Your {POKEBLOCK} Case is full.\p");
 static const u8 sText_HasNoBerriesToPut[] = _(" has no Berries to put in\nthe Berry Blender.");
 static const u8 sText_ApostropheSPokeblockCaseIsFull[] = _("'s {POKEBLOCK} Case is full.\p");
-static const u8 sText_BlendingResults[] = _("RESULTS Of BLENDING");
+static const u8 sText_BlendingResults[] = _("Results of Blending");
 static const u8 sText_SpaceBerry[] = _(" Berry");
 static const u8 sText_Time[] = _("Time:");
 static const u8 sText_Min[] = _(" min. ");

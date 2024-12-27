@@ -15355,7 +15355,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
 
     [MOVE_LIGHT_OF_RUIN] =
     {
-        .name = COMPOUND_STRING("Light Of Ruin"),
+        .name = COMPOUND_STRING("Light of Ruin"),
         .description = COMPOUND_STRING(
             "Fires a great beam of light\n"
             "that also hurts the user."),

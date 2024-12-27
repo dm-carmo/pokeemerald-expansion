@@ -1692,7 +1692,7 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
 
     [ABILITY_POWER_OF_ALCHEMY] =
     {
-        .name = _("Power Of Alchemy"),
+        .name = _("Power of Alchemy"),
         .description = COMPOUND_STRING("Copies ally's ability."),
         .aiRating = 0,
         .cantBeCopied = TRUE,

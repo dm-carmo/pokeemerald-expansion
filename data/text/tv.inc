@@ -1139,7 +1139,7 @@ SmartShopper_Text_OutroMax::
 	.string "Still, {STR_VAR_1} is certainly an enigma…$"
 
 gTVWorldOfMastersText00::
-	.string "The World Of Masters\p"
+	.string "The World of Masters\p"
 	.string "Hello, viewers.\p"
 	.string "Perhaps you are aware of a Trainer\n"
 	.string "named {STR_VAR_1}.\p"
@@ -1776,7 +1776,7 @@ TVSpotTheCuties_Text_RibbonChampion::
 	.string "The Champion Ribbon is especially\n"
 	.string "fetching.\p"
 	.string "{STR_VAR_2} received it upon entering\n"
-	.string "the Hall Of Fame.\p"
+	.string "the Hall of Fame.\p"
 	.string "It verily draws out the bravery\n"
 	.string "of {STR_VAR_2}.\p"
 	.string "{STR_VAR_2} and the Champ Ribbon!\n"
@@ -2833,7 +2833,7 @@ GabbyAndTy_Text_TyDefeat:
 	.string "That whole battle's on camera.$"
 
 gTVInSearchOfTrainersText00::
-	.string "In Search Of Trainers…\p"
+	.string "In Search of Trainers…\p"
 	.string "Gabby: Hi! Today I'm visiting an area\n"
 	.string "near {STR_VAR_1}.\p"
 	.string "We're trying to spot some up-and-\n"

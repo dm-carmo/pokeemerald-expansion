@@ -263,7 +263,7 @@ static const u8 gText_BatteryRunDry[] = _("The internal battery has run dry.\nTh
 
 static const u8 gText_MainMenuNewGame[] = _("New Game");
 static const u8 gText_MainMenuContinue[] = _("Continue");
-static const u8 gText_MainMenuOption[] = _("Option");
+static const u8 gText_MainMenuOption[] = _("Options");
 static const u8 gText_MainMenuMysteryGift[] = _("Mystery Gift");
 static const u8 gText_MainMenuMysteryGift2[] = _("Mystery Gift");
 static const u8 gText_MainMenuMysteryEvents[] = _("Mystery Events");

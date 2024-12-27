@@ -149,7 +149,7 @@ static const u8 sText_Stats_Gender_50[] = _("♀ 1/1 ♂");     //_("♀ 50 / 50
 static const u8 sText_Stats_Gender_75[] = _("♀ 3/1 ♂");     //_("♀ 75 / 25 ♂");
 static const u8 sText_Stats_Gender_87_5[] = _("♀ 7/1 ♂");
 static const u8 sText_Stats_Gender_100[] = _("♀");
-static const u8 sText_Stats_CatchRate[] = _("CATCH{0x5B}: ");
+static const u8 sText_Stats_CatchRate[] = _("Catch{0x5B}: ");
 static const u8 sText_Stats_CatchRate_Legend[] = _("Legendary");
 static const u8 sText_Stats_CatchRate_VeryHard[] = _("Very Hard");
 static const u8 sText_Stats_CatchRate_Difficult[] = _("Difficult");
@@ -297,7 +297,7 @@ static const u32 sPokedexPlusHGSS_ScreenSearchHoenn_Tilemap[] = INCBIN_U32("grap
 static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCBIN_U32("graphics/pokedex/hgss/tilemap_search_screen_national.bin.lz");
 
 #define SCROLLING_MON_X 146
-#define HGSS_DECAPPED FALSE
+#define HGSS_DECAPPED TRUE
 #define HGSS_DARK_MODE FALSE
 #define HGSS_HIDE_UNSEEN_EVOLUTION_NAMES FALSE
 

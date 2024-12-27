@@ -265,7 +265,7 @@ MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo:
 	.string "jumps in time.$"
 
 MossdeepCity_GameCorner_1F_Text_DodrioBerryPickingInfo:
-	.string "“Dodrio Berry-PICKING”\p"
+	.string "“Dodrio Berry-Picking\p"
 	.string "Command Dodrio's three heads to\n"
 	.string "catch falling Berries.\p"
 	.string "Press right, up, or left on the\n"
