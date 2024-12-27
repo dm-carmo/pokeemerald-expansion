@@ -149,9 +149,9 @@ const u8 gText_ThreeDashes[] = _("---");
 const u8 gText_MaleSymbol[] = _("♂");
 const u8 gText_FemaleSymbol[] = _("♀");
 const u8 gText_LevelSymbol[] = _("{LV}");
-const u8 gText_NumberClear01[] = _("{No}{CLEAR 0x01}");
+const u8 gText_NumberClear01[] = _("{NO}{CLEAR 0x01}");
 const u8 gText_RightArrow[] = _("{RIGHT_ARROW}"); // Unused
-const u8 gText_IDNumber2[] = _("{ID}{No}");
+const u8 gText_IDNumber2[] = _("{ID}{NO}");
 const u8 gText_Space[] = _(" ");
 const u8 gText_SelectorArrow2[] = _("▶");
 const u8 gText_GoBackPrevMenu[] = _("Go back to the\nprevious menu.");
@@ -236,7 +236,7 @@ const u8 *const gPocketNamesStringsTable[] =
     [KEYITEMS_POCKET] = COMPOUND_STRING("Key Items")
 };
 
-const u8 gText_NumberItem_TMBerry[] = _("{No}{STR_VAR_1}{CLEAR 0x07}{STR_VAR_2}");
+const u8 gText_NumberItem_TMBerry[] = _("{NO}{STR_VAR_1}{CLEAR 0x07}{STR_VAR_2}");
 const u8 gText_NumberItem_HM[] = _("{CLEAR_TO 0x11}{STR_VAR_1}{CLEAR 0x05}{STR_VAR_2}");
 
 const u8 gText_ShopBuy[] = _("Buy");
