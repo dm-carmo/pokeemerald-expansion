@@ -51,7 +51,9 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(SNATCH) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(HIDDEN_FORCE) \
+    F(SECRET_FORCE)
 
 #define FOREACH_HM(F) \
     F(CUT) \

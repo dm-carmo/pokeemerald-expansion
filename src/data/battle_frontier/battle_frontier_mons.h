@@ -821,7 +821,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_TEDDIURSA] = {
         .species = SPECIES_TEDDIURSA,
-        .moves = {MOVE_SECRET_POWER, MOVE_FAKE_TEARS, MOVE_FEINT_ATTACK, MOVE_REST},
+        .moves = {MOVE_SECRET_FORCE, MOVE_FAKE_TEARS, MOVE_FEINT_ATTACK, MOVE_REST},
         .heldItem = ITEM_CHESTO_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_RELAXED
@@ -884,7 +884,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_UNOWN] = {
         .species = SPECIES_UNOWN,
-        .moves = {MOVE_HIDDEN_POWER, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .moves = {MOVE_HIDDEN_POWER, MOVE_HIDDEN_FORCE, MOVE_NONE, MOVE_NONE},
         .heldItem = ITEM_LAX_INCENSE,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 0, 170, 0),
         .nature = NATURE_HARDY
@@ -1136,7 +1136,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_DELCATTY_1] = {
         .species = SPECIES_DELCATTY,
-        .moves = {MOVE_SECRET_POWER, MOVE_FEINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_HEAL_BELL},
+        .moves = {MOVE_SECRET_FORCE, MOVE_FEINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_HEAL_BELL},
         .heldItem = ITEM_SITRUS_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_LONELY
@@ -1423,7 +1423,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_LINOONE_1] = {
         .species = SPECIES_LINOONE,
-        .moves = {MOVE_SECRET_POWER, MOVE_SAND_ATTACK, MOVE_COVET, MOVE_TICKLE},
+        .moves = {MOVE_SECRET_FORCE, MOVE_SAND_ATTACK, MOVE_COVET, MOVE_TICKLE},
         .heldItem = ITEM_WHITE_HERB,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT
@@ -1542,7 +1542,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_KECLEON_1] = {
         .species = SPECIES_KECLEON,
-        .moves = {MOVE_SECRET_POWER, MOVE_PSYBEAM, MOVE_MAGIC_COAT, MOVE_SEISMIC_TOSS},
+        .moves = {MOVE_SECRET_FORCE, MOVE_PSYBEAM, MOVE_MAGIC_COAT, MOVE_SEISMIC_TOSS},
         .heldItem = ITEM_FOCUS_BAND,
         .ev = TRAINER_PARTY_EVS(170, 170, 170, 0, 0, 0),
         .nature = NATURE_NAIVE
@@ -4335,7 +4335,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
     },
     [FRONTIER_MON_DONPHAN_3] = {
         .species = SPECIES_DONPHAN,
-        .moves = {MOVE_FISSURE, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SECRET_POWER},
+        .moves = {MOVE_FISSURE, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SECRET_FORCE},
         .heldItem = ITEM_QUICK_CLAW,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
         .nature = NATURE_ADAMANT

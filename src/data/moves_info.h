@@ -7360,7 +7360,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
-        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .category = DAMAGE_CATEGORY_SPECIAL,
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_SECRET_POWER,
             .chance = 30,
@@ -20722,6 +20722,52 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
             .sheerForceBoost = SHEER_FORCE_BOOST,
         }),
         .battleAnimScript = gBattleAnimMove_MalignantChain,
+    },
+
+    [MOVE_HIDDEN_FORCE] =
+    {
+        .name = COMPOUND_STRING("Hidden Force"),
+        .description = COMPOUND_STRING(
+            "The effectiveness varies\n"
+            "with the user."),
+        .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
+        .effect = EFFECT_HIDDEN_POWER,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_REPETITION_NOT_BORING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_HiddenPower,
+    },
+
+    [MOVE_SECRET_FORCE] =
+    {
+        .name = COMPOUND_STRING("Secret Force"),
+        .description = COMPOUND_STRING(
+            "An attack with effects\n"
+            "that vary by location."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SECRET_POWER,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_BETTER_WITH_GOOD_CONDITION,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_SecretPower,
     },
 
     // Z-Moves

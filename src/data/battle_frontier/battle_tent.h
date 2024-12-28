@@ -2081,7 +2081,7 @@ const struct TrainerMon gVerdanturfBattleTentMons[NUM_VERDANTURF_TENT_MONS] =
     },
     [VERDANTURF_TENT_MON_VIGOROTH] = {
         .species = SPECIES_VIGOROTH,
-        .moves = {MOVE_ENCORE, MOVE_SLACK_OFF, MOVE_YAWN, MOVE_SECRET_POWER},
+        .moves = {MOVE_ENCORE, MOVE_SLACK_OFF, MOVE_YAWN, MOVE_SECRET_FORCE},
         .heldItem = ITEM_MENTAL_HERB,
         .ev = TRAINER_PARTY_EVS(0, 170, 170, 0, 0, 170),
         .nature = NATURE_QUIRKY
@@ -2808,7 +2808,7 @@ const struct TrainerMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_ARON_2] = {
         .species = SPECIES_ARON,
-        .moves = {MOVE_SECRET_POWER, MOVE_METAL_CLAW, MOVE_IRON_DEFENSE, MOVE_MUD_SLAP},
+        .moves = {MOVE_SECRET_FORCE, MOVE_METAL_CLAW, MOVE_IRON_DEFENSE, MOVE_MUD_SLAP},
         .heldItem = ITEM_SITRUS_BERRY,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
         .nature = NATURE_GENTLE
@@ -2857,7 +2857,7 @@ const struct TrainerMon gFallarborBattleTentMons[NUM_FALLARBOR_TENT_MONS] =
     },
     [FALLARBOR_TENT_MON_MIGHTYENA] = {
         .species = SPECIES_MIGHTYENA,
-        .moves = {MOVE_SAND_ATTACK, MOVE_HOWL, MOVE_SWAGGER, MOVE_SECRET_POWER},
+        .moves = {MOVE_SAND_ATTACK, MOVE_HOWL, MOVE_SWAGGER, MOVE_SECRET_FORCE},
         .heldItem = ITEM_KINGS_ROCK,
         .ev = TRAINER_PARTY_EVS(170, 170, 0, 170, 0, 0),
         .nature = NATURE_JOLLY

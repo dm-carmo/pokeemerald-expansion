@@ -2198,25 +2198,25 @@ static void DebugAction_Util_CheckROMSpace(u8 taskId)
 
 static const u8 sWeatherNames[22][24] = {
     [WEATHER_NONE]               = _("None"),
-    [WEATHER_SUNNY_CLOUDS]       = _("Sunny CLOUDS"),
+    [WEATHER_SUNNY_CLOUDS]       = _("Sunny Clouds"),
     [WEATHER_SUNNY]              = _("Sunny"),
     [WEATHER_RAIN]               = _("Rain"),
     [WEATHER_SNOW]               = _("Snow"),
-    [WEATHER_RAIN_THUNDERSTORM]  = _("Rain THUNDERSTORM"),
-    [WEATHER_FOG_HORIZONTAL]     = _("FOG HORIZONTAL"),
+    [WEATHER_RAIN_THUNDERSTORM]  = _("Rain Thunderstorm"),
+    [WEATHER_FOG_HORIZONTAL]     = _("Fog Horizontal"),
     [WEATHER_VOLCANIC_ASH]       = _("Volcanic Ash"),
     [WEATHER_SANDSTORM]          = _("Sandstorm"),
-    [WEATHER_FOG_DIAGONAL]       = _("FOG DIAGONAL"),
+    [WEATHER_FOG_DIAGONAL]       = _("Fog Diagonal"),
     [WEATHER_UNDERWATER]         = _("Underwater"),
-    [WEATHER_SHADE]              = _("SHADE"),
-    [WEATHER_DROUGHT]            = _("DROUGHT"),
-    [WEATHER_DOWNPOUR]           = _("DOWNPOUR"),
-    [WEATHER_UNDERWATER_BUBBLES] = _("Underwater BUBBLES"),
-    [WEATHER_ABNORMAL]           = _("ABNORMAL(Not WORKING)"),
-    [WEATHER_ROUTE119_CYCLE]     = _("ROUTE119 CYCLE"),
-    [WEATHER_ROUTE123_CYCLE]     = _("ROUTE123 CYCLE"),
+    [WEATHER_SHADE]              = _("Shade"),
+    [WEATHER_DROUGHT]            = _("Drought"),
+    [WEATHER_DOWNPOUR]           = _("Downpour"),
+    [WEATHER_UNDERWATER_BUBBLES] = _("Underwater Bubbles"),
+    [WEATHER_ABNORMAL]           = _("Abnormal(Not Working)"),
+    [WEATHER_ROUTE119_CYCLE]     = _("Route119 Cycle"),
+    [WEATHER_ROUTE123_CYCLE]     = _("Route123 Cycle"),
 };
-static const u8 sDebugText_WeatherNotDefined[] = _("Not DEFINED!!!");
+static const u8 sDebugText_WeatherNotDefined[] = _("Not Defined!!!");
 static void DebugAction_Util_Weather(u8 taskId)
 {
     u8 windowId;

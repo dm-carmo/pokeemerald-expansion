@@ -20,6 +20,7 @@ FortreeCity_House2_EventScript_HiddenPowerGiver::
 	case 0, FortreeCity_House2_EventScript_WrongGuess
 	msgbox FortreeCity_House2_Text_YourHiddenPowerHasAwoken, MSGBOX_DEFAULT
 	giveitem ITEM_TM_HIDDEN_POWER
+	giveitem ITEM_TM_HIDDEN_FORCE
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_TM_HIDDEN_POWER
 	msgbox FortreeCity_House2_Text_ExplainHiddenPower, MSGBOX_DEFAULT
@@ -72,8 +73,9 @@ FortreeCity_House2_Text_YourHiddenPowerHasAwoken:
 	.string "power of your Pokémon.$"
 
 FortreeCity_House2_Text_ExplainHiddenPower:
-	.string "Hidden Power is a move that changes\n"
-	.string "with the Pokémon.$"
+	.string "Hidden Power and Hidden Force\n"
+	.string "are moves that change with\n"
+	.string "the Pokémon.$"
 
 FortreeCity_House2_Text_YouGuessedWrong:
 	.string "No, too bad.\n"

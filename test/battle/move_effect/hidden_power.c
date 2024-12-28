@@ -93,10 +93,12 @@ SINGLE_BATTLE_TEST("Hidden Power's type is determined by IVs")
         OPPONENT(foeSpecies);
     } WHEN {
         TURN { MOVE(player, MOVE_HIDDEN_POWER); }
+        TURN { MOVE(player, MOVE_HIDDEN_FORCE); }
     } SCENE {
         // Only test valid Hidden Power types
         if (hidden) {
             ANIMATION(ANIM_TYPE_MOVE, MOVE_HIDDEN_POWER, player);
+            ANIMATION(ANIM_TYPE_MOVE, MOVE_HIDDEN_Force, player);
             HP_BAR(opponent);
             MESSAGE("It's not very effective…");
         }

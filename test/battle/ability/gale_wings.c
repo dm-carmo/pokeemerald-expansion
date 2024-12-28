@@ -57,12 +57,14 @@ SINGLE_BATTLE_TEST("Gale Wings doesn't increase priority of Flying-type Natural 
     PARAMETRIZE { move = MOVE_NATURAL_GIFT; heldItem = ITEM_LUM_BERRY; }
     PARAMETRIZE { move = MOVE_JUDGMENT; heldItem = ITEM_SKY_PLATE; }
     PARAMETRIZE { move = MOVE_HIDDEN_POWER; heldItem = ITEM_NONE; }
+    PARAMETRIZE { move = MOVE_HIDDEN_FORCE; heldItem = ITEM_NONE; }
     GIVEN {
         ASSUME(B_GALE_WINGS >= GEN_7);
         ASSUME(gMovesInfo[MOVE_NATURAL_GIFT].effect == EFFECT_NATURAL_GIFT);
         ASSUME(gMovesInfo[MOVE_JUDGMENT].effect == EFFECT_CHANGE_TYPE_ON_ITEM);
         // IV combinations sourced from https://www.smogon.com/forums/threads/hidden-power-iv-combinations.78083/
         ASSUME(gMovesInfo[MOVE_HIDDEN_POWER].effect == EFFECT_HIDDEN_POWER);
+        ASSUME(gMovesInfo[MOVE_HIDDEN_FORCE].effect == EFFECT_HIDDEN_POWER);
         ASSUME(gMovesInfo[MOVE_TERA_BLAST].effect == EFFECT_TERA_BLAST);
         ASSUME(gItemsInfo[ITEM_SKY_PLATE].holdEffect == HOLD_EFFECT_PLATE);
         ASSUME(gItemsInfo[ITEM_SKY_PLATE].secondaryId == TYPE_FLYING);
@@ -81,6 +83,9 @@ SINGLE_BATTLE_TEST("Gale Wings doesn't increase priority of Flying-type Natural 
         }
         else if (move == MOVE_HIDDEN_POWER) {
             MESSAGE("The opposing Talonflame used Hidden Power!");
+        }
+        else if (move == MOVE_HIDDEN_FORCE) {
+            MESSAGE("The opposing Talonflame used Hidden Force!");
         }
         else {
             MESSAGE("The opposing Talonflame used Tera Blast!");

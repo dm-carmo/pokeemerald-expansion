@@ -11168,28 +11168,34 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_OVERHEAT,
     },
 
-    [ITEM_TM51] =
+    [ITEM_TM_HIDDEN_FORCE] =
     {
         .name = _("TM51"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "The attack power\n"
+            "varies among\n"
+            "different Pokémon."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_HIDDEN_FORCE,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_SECRET_FORCE] =
     {
         .name = _("TM52"),
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Adds an effect to\n"
+            "attack depending\n"
+            "on the location."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_NONE, // Todo
+        .secondaryId = MOVE_SECRET_FORCE,
     },
 
     [ITEM_TM53] =

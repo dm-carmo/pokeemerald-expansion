@@ -335,10 +335,12 @@ SINGLE_BATTLE_TEST("(Z-MOVE) Z-Hidden Power always transforms into Breakneck Bli
     PARAMETRIZE { iv = 31; }
     GIVEN {
         ASSUME(gMovesInfo[MOVE_HIDDEN_POWER].type == TYPE_NORMAL);
+        ASSUME(gMovesInfo[MOVE_HIDDEN_FORCE].type == TYPE_NORMAL);
         PLAYER(SPECIES_WOBBUFFET) { Item(ITEM_NORMALIUM_Z); AttackIV(iv); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
         TURN { MOVE(player, MOVE_HIDDEN_POWER, gimmick: GIMMICK_Z_MOVE); }
+        TURN { MOVE(player, MOVE_HIDDEN_FORCE, gimmick: GIMMICK_Z_MOVE); }
     } SCENE {
         ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_ZMOVE_ACTIVATE, player);
         ANIMATION(ANIM_TYPE_MOVE, MOVE_BREAKNECK_BLITZ, player);

@@ -8011,7 +8011,7 @@ u32 ItemBattleEffects(enum ItemEffect caseID, u32 battler, bool32 moveTurn)
                 u16 ability = GetBattlerAbility(gBattlerAttacker);
                 if (B_SERENE_GRACE_BOOST >= GEN_5 && ability == ABILITY_SERENE_GRACE)
                     atkHoldEffectParam *= 2;
-                if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_RAINBOW && gCurrentMove != MOVE_SECRET_POWER)
+                if (gSideStatuses[GetBattlerSide(battler)] & SIDE_STATUS_RAINBOW && gCurrentMove != MOVE_SECRET_POWER && gCurrentMove != MOVE_SECRET_FORCE)
                     atkHoldEffectParam *= 2;
                 if (gBattleMoveDamage != 0  // Need to have done damage
                     && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
