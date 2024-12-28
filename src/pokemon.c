@@ -6317,7 +6317,7 @@ static void InitMonSpritesGfx_Battle(struct MonSpritesGfxManager* gfx)
     }
 }
 
-static void InitMonSpritesGfx_FullParty(struct MonSpritesGfxManager* gfx)
+/*static void InitMonSpritesGfx_FullParty(struct MonSpritesGfxManager* gfx)
 {
     u16 i, j;
     for (i = 0; i < gfx->numSprites; i++)
@@ -6330,7 +6330,7 @@ static void InitMonSpritesGfx_FullParty(struct MonSpritesGfxManager* gfx)
         gfx->templates[i].anims = gAnims_MonPic;
         gfx->templates[i].paletteTag = i;
     }
-}
+}*/
 
 struct MonSpritesGfxManager *CreateMonSpritesGfxManager(void)
 {
