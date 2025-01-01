@@ -114,6 +114,7 @@ enum GivePCBagFillDebugMenu
 {
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST,
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW,
+    DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW_EVOONLY,
     DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS,
     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS,
@@ -381,6 +382,7 @@ static void DebugAction_Util_CheckEWRAMCounters(u8 taskId);
 static void DebugAction_OpenPCBagFillMenu(u8 taskId);
 static void DebugAction_PCBag_Fill_PCBoxes_Fast(u8 taskId);
 static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId);
+static void DebugAction_PCBag_Fill_PCBoxes_Slow_EvoOnly(u8 taskId);
 static void DebugAction_PCBag_Fill_PCItemStorage(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketItems(u8 taskId);
 static void DebugAction_PCBag_Fill_PocketPokeBalls(u8 taskId);
@@ -542,11 +544,12 @@ static const u8 sDebugText_Util_EWRAMCounters[] =            _("EWRAM Counters�
 // PC/Bag Menu
 static const u8 sDebugText_PCBag_Fill[] =                    _("Fill…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_PCBag_Fill_Pc_Fast[] =            _("Fill PC Boxes Fast");
-static const u8 sDebugText_PCBag_Fill_Pc_Slow[] =            _("Fill PC Boxes Slow (LAG!)");
+static const u8 sDebugText_PCBag_Fill_Pc_Slow[] =            _("Fill PC Boxes Slow");
+static const u8 sDebugText_PCBag_Fill_Pc_Slow_EvoOnly[] =            _("Fill PC Boxes (Fully-Evolved)");
 static const u8 sDebugText_PCBag_Fill_Pc_Items[] =           _("Fill PC Items");
 static const u8 sDebugText_PCBag_Fill_PocketItems[] =        _("Fill Pocket Items");
 static const u8 sDebugText_PCBag_Fill_PocketPokeBalls[] =    _("Fill Pocket Poké Balls");
-static const u8 sDebugText_PCBag_Fill_PocketTMHM[] =         _("Fill Pocket TMHM");
+static const u8 sDebugText_PCBag_Fill_PocketTMHM[] =         _("Fill Pocket TM/HM");
 static const u8 sDebugText_PCBag_Fill_PocketBerries[] =      _("Fill Pocket Berries");
 static const u8 sDebugText_PCBag_Fill_PocketKeyItems[] =     _("Fill Pocket Key Items");
 static const u8 sDebugText_PCBag_AccessPC[] =                _("Access PC");
@@ -743,6 +746,7 @@ static const struct ListMenuItem sDebugMenu_Items_PCBag_Fill[] =
 {
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]    = {sDebugText_PCBag_Fill_Pc_Fast,         DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST},
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]    = {sDebugText_PCBag_Fill_Pc_Slow,         DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW},
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW_EVOONLY]    = {sDebugText_PCBag_Fill_Pc_Slow_EvoOnly,         DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW_EVOONLY},
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]         = {sDebugText_PCBag_Fill_Pc_Items ,       DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS},
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS]     = {sDebugText_PCBag_Fill_PocketItems,     DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS},
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS]     = {sDebugText_PCBag_Fill_PocketPokeBalls, DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS},
@@ -914,6 +918,7 @@ static void (*const sDebugMenu_Actions_PCBag_Fill[])(u8) =
 {
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_FAST]    = DebugAction_PCBag_Fill_PCBoxes_Fast,
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW]    = DebugAction_PCBag_Fill_PCBoxes_Slow,
+    [DEBUG_PCBAG_MENU_ITEM_FILL_PC_BOXES_SLOW_EVOONLY]    = DebugAction_PCBag_Fill_PCBoxes_Slow_EvoOnly,
     [DEBUG_PCBAG_MENU_ITEM_FILL_PC_ITEMS]         = DebugAction_PCBag_Fill_PCItemStorage,
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_ITEMS]     = DebugAction_PCBag_Fill_PocketItems,
     [DEBUG_PCBAG_MENU_ITEM_FILL_POCKET_BALLS]     = DebugAction_PCBag_Fill_PocketPokeBalls,
@@ -4163,6 +4168,41 @@ static void DebugAction_PCBag_Fill_PCBoxes_Slow(u8 taskId)
         }
     }
 
+    // Set flag for user convenience
+    FlagSet(FLAG_SYS_POKEMON_GET);
+    if (spaceAvailable)
+        PlayBGM(GetCurrentMapMusic());
+
+    Debug_DestroyMenu_Full_Script(taskId, Debug_BoxFilledMessage);
+}
+
+static void DebugAction_PCBag_Fill_PCBoxes_Slow_EvoOnly(u8 taskId)
+{
+    int boxId, boxPosition;
+    struct BoxPokemon boxMon;
+    u32 species = SPECIES_BULBASAUR;
+    bool8 spaceAvailable = FALSE;
+
+    for (boxId = 0; boxId < TOTAL_BOXES_COUNT && species < NUM_SPECIES; boxId++)
+    {
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT && species < NUM_SPECIES; boxPosition++)
+        {
+            const struct Evolution *evolutions;
+            while((evolutions = GetSpeciesEvolutions(species)) != NULL) ++species;
+            if(species >= NUM_SPECIES) goto set_flags;
+            if (!GetBoxMonData(&gPokemonStoragePtr->boxes[boxId][boxPosition], MON_DATA_SANITY_HAS_SPECIES))
+            {
+                if (!spaceAvailable)
+                    PlayBGM(MUS_RG_MYSTERY_GIFT);
+                CreateBoxMon(&boxMon, species, 100, USE_RANDOM_IVS, FALSE, 0, OT_ID_PLAYER_ID, 0);
+                gPokemonStoragePtr->boxes[boxId][boxPosition] = boxMon;
+                species = (species < NUM_SPECIES - 1) ? species + 1 : 1;
+                spaceAvailable = TRUE;
+            }
+        }
+    }
+
+    set_flags:
     // Set flag for user convenience
     FlagSet(FLAG_SYS_POKEMON_GET);
     if (spaceAvailable)
